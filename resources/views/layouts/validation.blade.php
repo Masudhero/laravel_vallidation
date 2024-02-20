@@ -49,7 +49,7 @@
                      @enderror
                         <div class="form-group col-md-12">
                           <label for="inputAddress2">Address 2</label>
-                          <input type="text" name="address_2" class="form-control" id="inputAddress2" placeholder="">
+                          <input type="number" name="address_2" class="form-control" id="inputAddress2" placeholder="">
                         </div>
                         @error('address_2')
                         <p class="text-warning">{{ $message }}</p>
@@ -82,10 +82,13 @@
                         </div>
                         <div class="form-group">
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <input class="form-check-input" type="checkbox" name="condation" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
                               Submit
                             </label>
+                            @error('condation')
+                            <p class="text-warning">{{ $message }}</p>
+                         @enderror
                           </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Sign in</button>

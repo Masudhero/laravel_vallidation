@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Rules\Uppercase;
+use App\Rules\ValidPhone;
 use Illuminate\Http\Request;
+use App\Http\Requests\ValidationRequest;
 use App\Http\Controllers\ValidateController;
 
 class ValidateController extends Controller
@@ -33,19 +36,9 @@ class ValidateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidationRequest $request)
     {
-        $request->validate([
-            'email'=>'required|email',
-            'password'=>'required|min:4|max:8',
-            'address'=>'required',
-            'address_2'=>'required',
-            'city'=>'required',
-            'state'=>'required|in:Mirpur-1,Mirpur-2,Mirpur-10,Mirpur-12',
-            'postal'=>'required'
-        ],['email.email'=>'email is required',
-            'email.required'=>'email is unvalid'
-           ]);
+      
     }
 
     /**
