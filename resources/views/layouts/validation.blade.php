@@ -76,7 +76,7 @@
                          @enderror
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="inputZip">Zip</label>
+                            <label for="inputZip">zip File</label>
                             <input type="text" name="postal" class="form-control" id="inputZip">
                           </div>
                         </div>
@@ -84,7 +84,7 @@
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck">
                             <label class="form-check-label" for="gridCheck">
-                              Click Me
+                              Submit
                             </label>
                           </div>
                         </div>
