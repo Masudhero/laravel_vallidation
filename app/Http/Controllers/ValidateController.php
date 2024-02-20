@@ -24,7 +24,7 @@ class ValidateController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +35,17 @@ class ValidateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required|min:4|max:8',
+            'address'=>'required',
+            'address_2'=>'required',
+            'city'=>'required',
+            'state'=>'required|in:Mirpur-1,Mirpur-2,Mirpur-10,Mirpur-12',
+            'postal'=>'required'
+        ],['email.email'=>'email is required',
+            'email.required'=>'email is unvalid'
+           ]);
     }
 
     /**
